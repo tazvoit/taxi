@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: taxi
-        image: image-registry.openshift-image-registry.svc:5000/test-cd/taxi:latest
+        image: image-registry.openshift-image-registry.svc:5000/test-cd/taxi
         imagePullPolicy: Always
         volumeMounts:
         - name: web-files
