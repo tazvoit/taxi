@@ -33,4 +33,4 @@ spec:
         configMap:
           name: www-files
       imagePullSecrets:
-        - name: kmcdermo-pull-secret
+        - name: pull-secret-local
