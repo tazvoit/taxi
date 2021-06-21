@@ -3,7 +3,7 @@ COPY . /go/build/
 WORKDIR /go/build
 
 # The commit for the build is logged out on startup.
-# RUN GIT_COMMIT=$(git rev-list -1 HEAD) && go build -ldflags "-X main.CommitSHA=$GIT_COMMIT" ./cmd/booktaxi
+RUN GIT_COMMIT=$(git rev-list -1 HEAD) && go build -ldflags "-X main.CommitSHA=$GIT_COMMIT" ./cmd/booktaxi
 
 FROM registry.access.redhat.com/ubi8/ubi-minimal
 WORKDIR /root/
