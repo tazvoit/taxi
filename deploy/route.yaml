@@ -1,0 +1,14 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+spec:
+  host: taxi
+  to:
+    kind: Service
+    name: taxi
+    weight: 100
+  port:
+    targetPort: http
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
+  wildcardPolicy: None
