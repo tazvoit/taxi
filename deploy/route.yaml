@@ -1,5 +1,13 @@
 kind: Route
 apiVersion: route.openshift.io/v1
+metadata:
+  name: taxi
+  labels:
+    app.kubernetes.io/instance: taxi
+    app.kubernetes.io/name: taxi
+    app.kubernetes.io/version: 0.0.1
+  annotations:
+    openshift.io/host.generated: 'true'
 spec:
   host: taxi
   to:
